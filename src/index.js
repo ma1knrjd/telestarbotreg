@@ -2,10 +2,10 @@
 // Единый процесс для Render: Telegram-бот (webhook или polling) + API для Android-приложения.
 const http = require('node:http');
 const crypto = require('node:crypto');
-const { loadConfig } = require('../../backend/src/config');
+const { loadConfig } = require('../backend/src/config');
 const { createRpc } = require('./database/db');
-const { createTelegramSender } = require('../../backend/src/telegram');
-const { createApi } = require('../../backend/src/server');
+const { createTelegramSender } = require('../backend/src/telegram');
+const { createApi } = require('../backend/src/server');
 const { buildBot, setupCommands } = require('./bot');
 
 async function main() {
